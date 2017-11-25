@@ -4,14 +4,13 @@ import { fetchGame, fetchGames } from './actions';
 import { Link } from 'react-router';
 
 class GameView extends React.Component {
-
     state = {
         games: this.props.games ? this.props.games: '',
         _id: this.props.game ? this.props.game._id: '',
         title: this.props.game ? this.props.game.title : '',
         cover: this.props.game ? this.props.game.cover : ''
     }
-
+    
     componentWillReceiveProps = (nextProps) => {
         this.setState({
             games: nextProps.games,
