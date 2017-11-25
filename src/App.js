@@ -5,6 +5,7 @@ import { Link, Match } from 'react-router';
 import GamesPage from './GamesPage';
 import GameFormPage from './GameFormPage';
 import Home from './Home';
+import GameView from './GameView';
 
 class App extends Component {
   render() {
@@ -19,7 +20,8 @@ class App extends Component {
         <Match exactly pattern ="/" component={Home} />
         <Match exactly pattern="/games" component={GamesPage} />
         <Match pattern="/games/new" component={GameFormPage} />
-        <Match pattern="/game/:_id" component={GameFormPage} />
+        <Match exactly pattern="/game/:_id" component={GameFormPage} />
+        <Match exactly pattern="/game/view/:_id" component={GameView} />
       </div>
     );
   }

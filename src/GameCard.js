@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
+import { Link, Match } from 'react-router';
+import GameView from './GameView';
 
  export default class GameCard extends React.Component {
     render() {
@@ -14,8 +15,9 @@ import { Link } from 'react-router';
                     <div className="header">{game.title}</div>
                 </div>
                 <div className="extra content">
-                    <div className="ui two buttons">
+                    <div className="ui three buttons">
                         <Link to={`/game/${game._id}`} className="ui basic button green">Edit</Link>
+                        <Link to={`/game/view/${game._id}`} className="ui basic button blue">View</Link>
                         <div className="ui basic button red" onClick={() => deleteGame(game._id)}>Delete</div>
                     </div>
                 </div>
