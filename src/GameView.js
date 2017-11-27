@@ -4,6 +4,7 @@ import { fetchGame, fetchGames } from './actions';
 import { Link } from 'react-router';
 
 class GameView extends React.Component {
+    
     state = {
         games: this.props.games ? this.props.games: '',
         _id: this.props.game ? this.props.game._id: '',
